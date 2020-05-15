@@ -16,3 +16,8 @@ new Vue({
         loading3:false
     }
 })
+
+//单元测试
+{
+    console.log(Button)
+}
