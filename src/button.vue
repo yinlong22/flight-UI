@@ -11,7 +11,22 @@
 
 <script>
     export default {
-        props: ['icon', 'iconPosition']
+        // props: ['icon', 'iconPosition']
+        props: {
+            icon: {},
+            iconPosition: {
+                type: String,
+                default: 'left',
+                validator(value) {
+                    if (value !== 'left' && value !== 'right') {
+                        window.alert('set左右显示比较好看')
+                        return false
+                    } else {
+                        return true
+                    }
+                }
+            }
+        }
     }
 </script>
 
@@ -26,7 +41,7 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        vertical-align: middle;//解决inline引起上下不对齐的问题
+        vertical-align: middle; //解决inline引起上下不对齐的问题
 
         &:hover {
             border-color: var(--border-color-hover);
