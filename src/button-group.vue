@@ -27,7 +27,7 @@
 
             &:not(:first-child) {
                 margin-left: -1px;
-            }
+            } 
 
             &:first-child {
                 border-top-left-radius: var(--border-radius);
