@@ -14,5 +14,8 @@
     "vue，ui"
   ],
   "author": "yinlong22",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
 }
