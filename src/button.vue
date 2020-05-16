@@ -12,7 +12,7 @@
 <script>
     // import Vue from 'vue'
     // Vue.component('g-icon',Icon)
-    import Icon from './Icon'
+    import Icon from './icon'
 
     export default {
         // props: ['icon', 'iconPosition']
