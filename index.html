@@ -31,19 +31,36 @@
         body {
             font-size: var(--font-size);
         }
+        .box{
+            margin: 20px;
+        }
     </style>
 </head>
 <body>
 <div id="app">
-    <g-button :loading="loading1" @click="loading1=!loading1">按钮</g-button>
-    <g-button :loading="loading2" @click="loading2=!loading2" icon="set">按钮</g-button>
-    <g-button :loading="loading3" @click="loading3=!loading3" icon="set" icon-position="right">按钮</g-button>
-    <g-button-group>
-        <g-button icon="left">上一页</g-button>
-        <g-button>更多</g-button>
-        <g-button icon="right" icon-position="right">下一页</g-button>
-    </g-button-group>
-    <div id="test"></div>
+    <div style="margin: 5px">
+        <f-button :loading="loading1" @click="loading1=!loading1">按钮</f-button>
+        <f-button :loading="loading2" @click="loading2=!loading2" icon="set">按钮</f-button>
+        <f-button :loading="loading3" @click="loading3=!loading3" icon="set" icon-position="right">按钮</f-button>
+        <f-button-group>
+            <f-button icon="left">上一页</f-button>
+            <f-button>更多</f-button>
+            <!--        <select>-->
+            <!--            <option value="">更多</option>-->
+            <!--            <option value="1">1</option>-->
+            <!--            <option value="2">2</option>-->
+            <!--        </select>-->
+            <f-button icon="right" icon-position="right">下一页</f-button>
+        </f-button-group>
+    </div>
+    <div class="box">
+    <f-input value="张三"></f-input>
+    <f-input value="李四" :disabled="true"></f-input>
+    <f-input value="王五" readonly></f-input>
+    </div>
+    <div class="box">
+    <f-input value="王" error="姓名不能少于两个字"></f-input>
+    </div>
 </div>
 
 <script src="./src/app.js"></script>

@@ -1,8 +1,8 @@
 <template>
-    <button class="g-button" :class="{[`icon-${iconPosition}`]:true}"
+    <button class="f-button" :class="{[`icon-${iconPosition}`]:true}"
             @click="$emit('click')">
-        <g-icon class="icon" v-if="icon && !loading" :name="icon"></g-icon>
-        <g-icon class="loading icon" v-if="loading" name="loading"></g-icon>
+        <f-icon class="icon" v-if="icon && !loading" :name="icon"></f-icon>
+        <f-icon class="loading icon" v-if="loading" name="loading"></f-icon>
         <div class="content">
             <slot/>
         </div>
@@ -15,9 +15,10 @@
     import Icon from './icon'
 
     export default {
+        name:'fliButton',
         // props: ['icon', 'iconPosition']
         components: {
-            'g-icon': Icon
+            'f-icon': Icon
         },
         props: {
             icon: {},
@@ -41,8 +42,8 @@
     }
 </script>
 
-<style lang="scss">
-    .g-button {
+<style lang="scss" scoped>
+    .f-button {
         font-size: var(--font-size);
         height: var(--button-height);
         padding: 0 1em;
