@@ -3,6 +3,7 @@ node_js:
   - "8"
 addons:
   chrome: stable
+sudo:required
 before_script:
-  - "chown root /opt/google/chrome/chrome-sandbox"
-  - "chmod 4755 /opt/google/chrome/chrome-sandbox"
+  - "sudo chown root /opt/google/chrome/chrome-sandbox"
+  - "sudo chmod 4755 /opt/google/chrome/chrome-sandbox"
