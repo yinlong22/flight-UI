@@ -31,13 +31,16 @@
         body {
             font-size: var(--font-size);
         }
-        .box{
+
+        .box {
             margin: 20px;
         }
+
     </style>
 </head>
 <body>
 <div id="app">
+
     <div style="margin: 5px">
         <f-button :loading="loading1" @click="loading1=!loading1">按钮</f-button>
         <f-button :loading="loading2" @click="loading2=!loading2" icon="set">按钮</f-button>
@@ -53,18 +56,39 @@
             <f-button icon="right" icon-position="right">下一页</f-button>
         </f-button-group>
     </div>
+
     <div class="box">
-    <f-input value="张三"></f-input>
-    <f-input value="李四" :disabled="true"></f-input>
-    <f-input value="王五" readonly></f-input>
+        <f-input value="张三"></f-input>
+        <f-input value="李四" :disabled="true"></f-input>
+        <f-input value="王五" readonly></f-input>
     </div>
     <div class="box">
-    <f-input value="王" error="姓名不能少于两个字"></f-input>
+        <f-input value="王" error="姓名不能少于两个字"></f-input>
     </div>
     <div class="box">
-        <f-input value="王"  v-model="message" @change="inputChange"></f-input>
+        <f-input value="王" v-model="message" @change="inputChange"></f-input>
         <p>{{message}}</p>
     </div>
+
+    <f-row>
+        <f-col></f-col>
+        <f-col></f-col>
+    </f-row>
+    <f-row>
+        <f-col></f-col>
+        <f-col></f-col>
+        <f-col></f-col>
+    </f-row>
+    <f-row>
+        <f-col></f-col>
+        <f-col></f-col>
+        <f-col></f-col>
+        <f-col></f-col>
+    </f-row>
+    <f-row>
+        <f-col span="8"></f-col>
+        <f-col span="16"></f-col>
+    </f-row>
 </div>
 
 <script src="./src/app.js"></script>
