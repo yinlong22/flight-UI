@@ -51,16 +51,21 @@ describe('Input', () => {
         const callback = sinon.fake()
         it('支持 change/input/focus/blur 事件', () => {
             ['change', 'input', 'focus', 'blur']
-            .forEach((eventName) => {
-                vm.$on(eventName, callback)
-                //触发 input 的 change 事件
-                let event = new Event(eventName)
-                let inputElement = vm.$el.querySelector('input')
-                inputElement.dispatchEvent(event)
-                expect(callback).to.have.been.calledWith(event)
-                //测试 change 事件有几个参数
-                vm.$destroy()
-            })
+                .forEach((eventName) => {
+                    vm.$on(eventName, callback)
+                    //触发 input 的 change 事件
+                    let event = new Event(eventName)
+                    Object.defineProperty(
+                        event, 'target', {
+                            value: {value: 'hello'}, enumerable: true
+                        }
+                    )
+                    let inputElement = vm.$el.querySelector('input')
+                    inputElement.dispatchEvent(event)
+                    expect(callback).to.have.been.calledWith('hello')
+                    //测试 change 事件有几个参数
+                    vm.$destroy()
+                })
         })
     })
 })
