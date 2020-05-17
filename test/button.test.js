@@ -16,18 +16,18 @@ describe('Button', () => {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
             propsData: {
-                icon: 'settings'
+                icon: 'set'
             }
         }).$mount()
         const useElement = vm.$el.querySelector('use')
-        expect(useElement.getAttribute('xlink:href')).to.equal('#i-settings')
+        expect(useElement.getAttribute('xlink:href')).to.equal('#i-set')
         vm.$destroy()
     })
     it('可以设置loading.', () => {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
             propsData: {
-                icon: 'settings',
+                icon: 'set',
                 loading: true
             }
         }).$mount()
@@ -42,7 +42,7 @@ describe('Button', () => {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
             propsData: {
-                icon: 'settings',
+                icon: 'set',
             }
         }).$mount(div)
         const icon = vm.$el.querySelector('svg')
@@ -56,7 +56,7 @@ describe('Button', () => {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
             propsData: {
-                icon: 'settings',
+                icon: 'set',
                 iconPosition: 'right'
             }
         }).$mount(div)
@@ -69,7 +69,7 @@ describe('Button', () => {
         const Constructor = Vue.extend(Button)
         const vm = new Constructor({
             propsData: {
-                icon: 'settings',
+                icon: 'set',
             }
         }).$mount()
 

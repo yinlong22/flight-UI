@@ -8,7 +8,7 @@ import Input from './input'
 Vue.component('f-button', Button)
 Vue.component('f-icon', Icon)
 Vue.component('f-button-group', ButtonGroup)
-Vue.component('f-input',Input)
+Vue.component('f-input', Input)
 
 new Vue({
     el: '#app',
@@ -16,6 +16,11 @@ new Vue({
         loading1: false,
         loading2: true,
         loading3: false
+    },
+    methods: {
+        inputChange(e) {
+            console.log(e.target.value);
+        }
     }
 })
 
