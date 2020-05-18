@@ -35,10 +35,20 @@
         .box {
             margin: 20px;
         }
-
-        .demo{
-            border: 1px solid #666;
-            min-height: 100px;
+        .sider{
+            background: darkseagreen;
+            width: 250px;
+        }
+        .sider.slide-enter, .sider.slide-leave-to{
+            margin-left: -250px;
+        }
+        .header{
+            background: #999;
+            height: 100px;
+        }
+        .footer{
+            background: #ccc;
+            height: 60px;
         }
     </style>
 </head>
@@ -74,13 +84,13 @@
         <f-col gutter="20" span="12" offset="2">22</f-col>
     </f-row>
 
-    <f-layout class="box">
-        <f-header class="demo">header</f-header>
+    <f-layout class="box" style="height: 100vh">
+        <f-sider>sider</f-sider>
         <f-layout>
-            <f-sider class="demo">sider</f-sider>
-            <f-content class="demo">content</f-content>
+            <f-header>header</f-header>
+            <f-content>content</f-content>
+            <f-footer>footer</f-footer>
         </f-layout>
-        <f-footer class="demo">footer</f-footer>
     </f-layout>
 </div>
 
