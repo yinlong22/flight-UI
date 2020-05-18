@@ -5,7 +5,13 @@
 </template>
 <script>
     export default {
-        name: 'fliToast'
+        name: 'fliToast',
+        props:{
+            autoClose:{
+                type:Boolean,
+                default:true
+            }
+        }
     }
 </script>
 <style lang="scss" scoped>
