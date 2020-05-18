@@ -53,7 +53,7 @@ describe('Col', () => {
         div.remove()
         vm.$destroy()
     })
-    it('接收 ipad 属性', () => {
+    it('接收 iPad 属性', () => {
         const div = document.createElement('div')
         document.body.appendChild(div)
         const Constructor = Vue.extend(Col)
@@ -63,12 +63,12 @@ describe('Col', () => {
             }
         }).$mount(div)
         const element = vm.$el
-        expect(vm.$el.classList.contains('col-ipad-1')).to.eq(true)
-        expect(vm.$el.classList.contains('offset-ipad-2')).to.eq(true)
+        expect(vm.$el.classList.contains('col-iPad-1')).to.eq(true)
+        expect(vm.$el.classList.contains('offset-iPad-2')).to.eq(true)
         div.remove()
         vm.$destroy()
     })
-    it('接收 narrow-pc 属性', () => {
+    it('接收 narrowPc 属性', () => {
         const div = document.createElement('div')
         document.body.appendChild(div)
         const Constructor = Vue.extend(Col)
@@ -78,12 +78,12 @@ describe('Col', () => {
             }
         }).$mount(div)
         const element = vm.$el
-        expect(vm.$el.classList.contains('col-narrow-pc-1')).to.eq(true)
-        expect(vm.$el.classList.contains('offset-narrow-pc-2')).to.eq(true)
+        expect(vm.$el.classList.contains('col-narrowPc-1')).to.eq(true)
+        expect(vm.$el.classList.contains('offset-narrowPc-2')).to.eq(true)
         div.remove()
         vm.$destroy()
     })
-    it('接收 wide-pc 属性', () => {
+    it('接收 widePc 属性', () => {
         const div = document.createElement('div')
         document.body.appendChild(div)
         const Constructor = Vue.extend(Col)
@@ -93,8 +93,8 @@ describe('Col', () => {
             }
         }).$mount(div)
         const element = vm.$el
-        expect(vm.$el.classList.contains('col-wide-pc-1')).to.eq(true)
-        expect(vm.$el.classList.contains('offset-wide-pc-2')).to.eq(true)
+        expect(vm.$el.classList.contains('col-widePc-1')).to.eq(true)
+        expect(vm.$el.classList.contains('offset-widePc-2')).to.eq(true)
         div.remove()
         vm.$destroy()
     })
