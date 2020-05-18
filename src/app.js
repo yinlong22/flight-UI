@@ -5,6 +5,11 @@ import ButtonGroup from './button-group'
 import Input from './input'
 import Row from './row'
 import Col from './col'
+import Layout from './layout'
+import Sider from './sider'
+import Content from './content'
+import Footer from './footer'
+import Header from './header'
 
 //注册
 Vue.component('f-button', Button)
@@ -13,6 +18,12 @@ Vue.component('f-button-group', ButtonGroup)
 Vue.component('f-input', Input)
 Vue.component('f-row', Row)
 Vue.component('f-col', Col)
+Vue.component('f-layout', Layout)
+Vue.component('f-header', Header)
+Vue.component('f-footer', Footer)
+Vue.component('f-sider', Sider)
+Vue.component('f-content', Content)
+
 
 new Vue({
     el: '#app',

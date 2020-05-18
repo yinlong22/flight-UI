@@ -36,6 +36,10 @@
             margin: 20px;
         }
 
+        .demo{
+            border: 1px solid #666;
+            min-height: 100px;
+        }
     </style>
 </head>
 <body>
@@ -69,6 +73,15 @@
         <f-col gutter="20" span="10">11</f-col>
         <f-col gutter="20" span="12" offset="2">22</f-col>
     </f-row>
+
+    <f-layout class="box">
+        <f-header class="demo">header</f-header>
+        <f-layout>
+            <f-sider class="demo">sider</f-sider>
+            <f-content class="demo">content</f-content>
+        </f-layout>
+        <f-footer class="demo">footer</f-footer>
+    </f-layout>
 </div>
 
 <script src="./src/app.js"></script>
