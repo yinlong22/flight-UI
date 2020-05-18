@@ -41,15 +41,15 @@
     .row {
         display: flex;
         flex-wrap: wrap;
-        &align-left {
+        &.align-left {
             justify-content: flex-start;
         }
 
-        &align-right {
+        &.align-right {
             justify-content: flex-end;
         }
 
-        &align-center {
+        &.align-center {
             justify-content: center;
         }
     }
