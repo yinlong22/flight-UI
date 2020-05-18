@@ -84,9 +84,9 @@
 </script>
 <style lang="scss" scoped>
     .col {
-        height: 100px;
+        /*height: 100px;*/
         background: mediumaquamarine;
-        width: 50%;
+        /*width: 50%;*/
         border: 1px solid wheat;
 
         $class-prefix: col-;
