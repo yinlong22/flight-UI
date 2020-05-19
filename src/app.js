@@ -40,10 +40,19 @@ new Vue({
     created() {
     },
     methods: {
-        showToast() {
+        showToast1(){
+          this.showToast('top')
+        },
+        showToast2(){
+            this.showToast('middle')
+        },
+        showToast3(){
+            this.showToast('bottom')
+        },
+        showToast(position) {
             this.$toast('<strong>您的智商需要充值了</strong>', {
                 enableHtml: true,
-                position:'middle',
+                position,
                 closeButton: {
                     text: '已充值',
                     callback(toast) {
