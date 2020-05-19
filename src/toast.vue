@@ -1,7 +1,9 @@
 <template>
-    <div class="toast" ref="wrapper">
-        <slot v-if="!enableHtml"></slot>
-        <div v-else v-html="$slots.default[0]"></div>
+    <div class="toast" ref="wrapper" :class="toastClasses">
+        <div class="message">
+            <slot v-if="!enableHtml"></slot>
+            <div v-else v-html="$slots.default[0]"></div>
+        </div>
         <div class="line" ref="line"></div>
         <span class="close" v-if="closeButton" @click="onClickClose">
             {{closeButton.text}}
@@ -18,7 +20,7 @@
             },
             autoCloseDelay: {
                 type: Number,
-                default: 22
+                default: 9
             },
             closeButton: {
                 type: Object,
@@ -31,11 +33,23 @@
             enableHtml: {
                 type: Boolean,
                 default: false
+            },
+            position: {
+                type: String,
+                default: 'top',
+                validator(value) {
+                    return ['top', 'bottom', 'middle'].indexOf(value) >= 0
+                }
             }
         },
         mounted() {
             this.execAutoClose()
             this.updateStyles()
+        },
+        computed: {
+            toastClasses() {
+                return {[`position-${this.position}`]: true}
+            }
         },
         methods: {
             execAutoClose() {
@@ -76,9 +90,7 @@
     $toast-bg: rgba(0, 0, 0, 0.75);
     .toast {
         position: fixed;
-        top: 0;
         left: 50%;
-        transform: translateX(-50%);
         font-size: $font-size;
         min-height: $toast-min-height;
         line-height: $line-height;
@@ -89,17 +101,38 @@
         padding: 0 16px;
         background: $toast-bg;
         box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.50);
-    }
 
-    .close {
-        padding-left: 15px;
-        flex-shrink: 0;
-    }
+        .close {
+            padding-left: 15px;
+            flex-shrink: 0;
+        }
 
-    .line {
-        top: 0;
-        height: 100%;
-        border-left: 1px solid #666;
-        margin-left: 16px;
+        .line {
+            top: 0;
+            height: 100%;
+            border-left: 1px solid #666;
+            margin-left: 16px;
+        }
+
+        .message {
+            padding: 8px 0;
+        }
+
+        &.position-top {
+            transform: translateX(-50%);
+            top: 0;
+        }
+
+        &.position-bottom {
+            bottom: 0;
+            transform: translateX(-50%);
+
+        }
+
+        &.position-middle {
+            top: 50%;
+            transform: translate(-50%,-50%);
+
+        }
     }
 </style>
