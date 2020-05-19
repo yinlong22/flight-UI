@@ -1,6 +1,8 @@
 <template>
-    <div class="toast">
-        <slot></slot>
+    <div class="toast" ref="wrapper">
+        <slot v-if="!enableHtml"></slot>
+        <div v-else v-html="$slots.default[0]"></div>
+        <div class="line" ref="line"></div>
         <span class="close" v-if="closeButton" @click="onClickClose">
             {{closeButton.text}}
         </span>
@@ -25,21 +27,35 @@
                         text: '关闭', callback: undefined
                     }
                 }
+            },
+            enableHtml: {
+                type: Boolean,
+                default: false
             }
         },
         mounted() {
-            if (this.autoClose) {
-                setTimeout(() => {
-                    this.close()
-                }, this.autoCloseDelay * 1000)
-            }
+            this.execAutoClose()
+            this.updateStyles()
         },
         methods: {
+            execAutoClose() {
+                if (this.autoClose) {
+                    setTimeout(() => {
+                        this.close()
+                    }, this.autoCloseDelay * 1000)
+                }
+            },
+            updateStyles() {
+                this.$nextTick(() => {
+                    this.$refs.line.style.height =
+                        `${this.$refs.wrapper.getBoundingClientRect().height}px`
+                })
+            },
             close() {
                 this.$el.remove()
                 this.destroy()
             },
-            log(){
+            log() {
                 console.log('test');
             },
             onClickClose() {
@@ -56,7 +72,7 @@
 <style lang="scss" scoped>
     $font-size: 16px;
     $line-height: 1.8;
-    $toast-height: 40px;
+    $toast-min-height: 40px;
     $toast-bg: rgba(0, 0, 0, 0.75);
     .toast {
         position: fixed;
@@ -64,7 +80,7 @@
         left: 50%;
         transform: translateX(-50%);
         font-size: $font-size;
-        height: $toast-height;
+        min-height: $toast-min-height;
         line-height: $line-height;
         display: flex;
         color: honeydew;
@@ -76,14 +92,14 @@
     }
 
     .close {
-        padding-left: 12px;
+        padding-left: 15px;
+        flex-shrink: 0;
+    }
 
-        &::before {
-            content: '';
-            top: 0;
-            height: 100%;
-            border-left: 0.1em solid honeydew;
-            margin-right: 10px;
-        }
+    .line {
+        top: 0;
+        height: 100%;
+        border-left: 1px solid #666;
+        margin-left: 16px;
     }
 </style>
