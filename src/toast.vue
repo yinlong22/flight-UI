@@ -67,7 +67,7 @@
             },
             close() {
                 this.$el.remove()
-                this.destroy()
+                // this.destroy()
             },
             log() {
                 console.log('test');
