@@ -59,7 +59,8 @@ new Vue({
                         toast.log()
                         console.log('用户说他充值智商了');
                     }
-                }
+                },
+                autoClose: 8,
             })
         }
     }

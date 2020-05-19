@@ -51,5 +51,4 @@ describe('Row', () => {
         div.remove()
         vm.$destroy()
     })
-
 })
