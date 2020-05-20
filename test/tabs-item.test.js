@@ -29,6 +29,8 @@ describe('TabsItem', () => {
             }
         }).$mount()
         expect(vm.$el.getAttribute('data-name')).to.eq('xxx')
+        vm.$el.remove()
+        vm.$destroy()
     })
     it('接受 disabled 属性', () => {
         const Constructor = Vue.extend(TabsItem)
@@ -42,5 +44,7 @@ describe('TabsItem', () => {
         vm.$on('click', callback)
         vm.$el.click()
         expect(callback).to.have.not.been.called
+        vm.$el.remove()
+        vm.$destroy()
     })
 })
