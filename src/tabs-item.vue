@@ -1,5 +1,5 @@
 <template>
-    <div class="tabs-item" @click="xxx">
+    <div class="tabs-item" @click="xxx" :class="classes">
         <slot></slot>
     </div>
 </template>
@@ -7,6 +7,11 @@
     export default {
         name: 'filTabsItem',
         inject: ['eventBus'],
+        data() {
+            return {
+                active: false
+            }
+        },
         props: {
             disabled: {
                 type: Boolean,
@@ -15,13 +20,20 @@
             name: {
                 type: String | Number,
                 required: true
+            },
+        },
+        computed: {
+            classes() {
+                return {
+                    active: this.active
+                }
             }
         },
         created() {
             console.log('爷爷给孙子的 eventBus');
             console.log(this.eventBus);
-            this.eventBus.$on('update:selected',(name)=>{
-                console.log(name);
+            this.eventBus.$on('update:selected', (name) => {
+                this.active = name === this.name;
             })
         },
         methods: {
@@ -31,8 +43,12 @@
         }
     }
 </script>
-<style>
+<style lang="scss" scoped>
     .tabs-item {
-
+        padding: 0 1.5em;
+        flex-shrink: 0;
+        &.active{
+             background: red;
+         }
     }
 </style>
