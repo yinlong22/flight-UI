@@ -103,13 +103,14 @@
 
     <div style="padding: 8px 0"></div>
 
-    <f-tabs :selected.sync="selectedTab">
+    <f-tabs :selected.sync="selectedTabs">
         <f-tabs-head>
             <template slot="actions">
                 <button>设置</button>
             </template>
             <f-tabs-item name="woman" disabled>
-                <f-icon name="set"></f-icon> 美女
+                <f-icon name="set"></f-icon>
+                美女
             </f-tabs-item>
             <f-tabs-item name="finance">
                 财经
@@ -130,6 +131,8 @@
             </f-tabs-pane>
         </f-tabs-body>
     </f-tabs>
+
+    <div style="padding: 8px 0"></div>
 
     <f-collapse :selected.sync="selectedTab">
         <f-collapse-item title="标题1" name="1">内容1</f-collapse-item>

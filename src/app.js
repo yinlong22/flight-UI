@@ -18,6 +18,8 @@ import TabsBody from './tabs-body'
 import TabsItem from './tabs-item'
 import TabsPane from './tabs-pane'
 import Popover from './popover'
+import Collapse from './collapse'
+import CollapseItem from './collapse-item'
 
 //注册
 Vue.component('f-button', Button)
@@ -38,6 +40,8 @@ Vue.component('f-tabs-body', TabsBody)
 Vue.component('f-tabs-item', TabsItem)
 Vue.component('f-tabs-pane', TabsPane)
 Vue.component('f-popover', Popover)
+Vue.component('f-collapse', Collapse)
+Vue.component('f-collapse-item', CollapseItem)
 
 Vue.use(plugin)
 
@@ -51,8 +55,8 @@ new Vue({
         loading2: true,
         loading3: false,
         message: 'hello',
-        selectedTab: 'sport',
-        selectedTabs: ['2','1']
+        selectedTabs: 'sport',
+        selectedTab: ['2','1']
     },
 
     created() {
