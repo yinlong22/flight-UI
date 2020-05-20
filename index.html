@@ -35,18 +35,22 @@
         .box {
             margin: 20px;
         }
-        .sider{
+
+        .sider {
             background: darkseagreen;
             width: 250px;
         }
-        .sider.slide-enter, .sider.slide-leave-to{
+
+        .sider.slide-enter, .sider.slide-leave-to {
             margin-left: -250px;
         }
-        .header{
+
+        .header {
             background: #999;
             height: 100px;
         }
-        .footer{
+
+        .footer {
             background: #ccc;
             height: 60px;
         }
@@ -96,6 +100,35 @@
     <button @click="showToast1">top</button>
     <button @click="showToast2">middle</button>
     <button @click="showToast3">bottom</button>
+
+    <hr>
+    <f-tabs :selected.sync="selectedTab">
+        <f-tabs-head>
+            <template slot="actions">
+                <button>设置</button>
+            </template>
+            <f-tabs-item name="woman">
+                <f-icon name="set"></f-icon> 美女
+            </f-tabs-item>
+            <f-tabs-item name="finance">
+                财经
+            </f-tabs-item>
+            <f-tabs-item name="sport" disabled>
+                体育
+            </f-tabs-item>
+        </f-tabs-head>
+        <f-tabs-body>
+            <f-tabs-pane name="woman">
+                美女相关资讯
+            </f-tabs-pane>
+            <f-tabs-pane>
+                财经相关资讯
+            </f-tabs-pane>
+            <f-tabs-pane>
+                体育相关资讯
+            </f-tabs-pane>
+        </f-tabs-body>
+    </f-tabs>
 </div>
 
 <script src="./src/app.js"></script>

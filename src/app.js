@@ -12,6 +12,12 @@ import Footer from './footer'
 import Header from './header'
 import Toast from './toast'
 import plugin from './plugin'
+import Tabs from './tabs'
+import TabsHead from './tabs-head'
+import TabsBody from './tabs-body'
+import TabsItem from './tabs-item'
+import TabsPane from './tabs-pane'
+
 
 //注册
 Vue.component('f-button', Button)
@@ -26,6 +32,11 @@ Vue.component('f-footer', Footer)
 Vue.component('f-sider', Sider)
 Vue.component('f-content', Content)
 Vue.component('f-toast', Toast)
+Vue.component('f-tabs', Tabs)
+Vue.component('f-tabs-head', TabsHead)
+Vue.component('f-tabs-body', TabsBody)
+Vue.component('f-tabs-item', TabsItem)
+Vue.component('f-tabs-pane', TabsPane)
 Vue.use(plugin)
 
 new Vue({
@@ -34,19 +45,20 @@ new Vue({
         loading1: false,
         loading2: true,
         loading3: false,
-        message: 'hello'
+        message: 'hello',
+        selectedTab:'sport'
     },
 
     created() {
     },
     methods: {
-        showToast1(){
-          this.showToast('top')
+        showToast1() {
+            this.showToast('top')
         },
-        showToast2(){
+        showToast2() {
             this.showToast('middle')
         },
-        showToast3(){
+        showToast3() {
             this.showToast('bottom')
         },
         showToast(position) {
