@@ -102,18 +102,19 @@
     <button @click="showToast3">bottom</button>
 
     <div style="padding: 8px 0"></div>
+
     <f-tabs :selected.sync="selectedTab">
         <f-tabs-head>
             <template slot="actions">
                 <button>设置</button>
             </template>
-            <f-tabs-item name="woman">
+            <f-tabs-item name="woman" disabled>
                 <f-icon name="set"></f-icon> 美女
             </f-tabs-item>
             <f-tabs-item name="finance">
                 财经
             </f-tabs-item>
-            <f-tabs-item name="sport" disabled>
+            <f-tabs-item name="sport">
                 体育
             </f-tabs-item>
         </f-tabs-head>

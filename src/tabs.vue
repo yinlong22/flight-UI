@@ -32,24 +32,27 @@
             }
         },
         mounted() {
+            if (this.$children.length === 0) {
+                console && console.warn &&
+                console.warn
+                ('tabs的子组件应该是tabs-head和tabs-nav，但你没有写子组件')
+            }
             this.$children.forEach((vm) => {
                 if (vm.$options.name === 'fliTabsHead') {
-                    vm.$children.forEach((item) => {
-                        if (item.$options.name === 'fliTabsItem' &&
-                            item.name === this.selected) {
+                    vm.$children.forEach((childVm) => {
+                        // console.log(childVm.$options.name === "fliTabsItem") false?
+                        if (childVm.$props.name === this.selected) {
                             this.eventBus.$emit
-                            ('update:selected', this.selected, item)
+                            ('update:selected', this.selected, childVm)
                         }
                     })
                 }
             })
-            this.eventBus.$emit('update:selected', this.selected)
         },
 
     }
 </script>
 <style>
     .tabs {
-
     }
 </style>

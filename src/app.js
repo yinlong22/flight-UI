@@ -39,6 +39,10 @@ Vue.component('f-tabs-item', TabsItem)
 Vue.component('f-tabs-pane', TabsPane)
 Vue.use(plugin)
 
+import createElement from 'vue'
+
+const h = createElement
+
 new Vue({
     el: '#app',
     data: {
@@ -46,11 +50,12 @@ new Vue({
         loading2: true,
         loading3: false,
         message: 'hello',
-        selectedTab:'sport'
+        selectedTab: 'sport',
     },
 
     created() {
     },
+
     methods: {
         showToast1() {
             this.showToast('top')
