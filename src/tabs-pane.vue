@@ -5,7 +5,13 @@
 </template>
 <script>
     export default {
-        name: 'filTabsPane'
+        name: 'filTabsPane',
+        inject: ['eventBus'],
+        created() {
+            this.eventBus.$on('update:selected',(name)=>{
+                console.log(name);
+            })
+        }
     }
 </script>
 <style>

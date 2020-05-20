@@ -6,7 +6,12 @@
 </template>
 <script>
     export default {
-        name:'fliTabsHead'
+        name:'fliTabsHead',
+        inject: ['eventBus'],
+        created() {
+            console.log('爷爷给爸爸的 eventBus');
+            console.log(this.eventBus);
+        }
     }
 </script>
 <style>

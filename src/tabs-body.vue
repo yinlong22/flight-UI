@@ -5,11 +5,15 @@
 </template>
 <script>
     export default {
-        name:'filTabsBody'
+        name: 'filTabsBody',
+        inject: ['eventBus'],
+        created() {
+        }
     }
+
 </script>
 <style>
-    .tabs-body{
+    .tabs-body {
 
     }
 </style>
