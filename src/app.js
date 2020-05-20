@@ -17,7 +17,7 @@ import TabsHead from './tabs-head'
 import TabsBody from './tabs-body'
 import TabsItem from './tabs-item'
 import TabsPane from './tabs-pane'
-
+import Popover from './popover'
 
 //注册
 Vue.component('f-button', Button)
@@ -37,12 +37,13 @@ Vue.component('f-tabs-head', TabsHead)
 Vue.component('f-tabs-body', TabsBody)
 Vue.component('f-tabs-item', TabsItem)
 Vue.component('f-tabs-pane', TabsPane)
+Vue.component('f-popover', Popover)
+
 Vue.use(plugin)
 
 import createElement from 'vue'
 
 const h = createElement
-
 new Vue({
     el: '#app',
     data: {
@@ -51,6 +52,7 @@ new Vue({
         loading3: false,
         message: 'hello',
         selectedTab: 'sport',
+        selectedTabs: ['2','1']
     },
 
     created() {
