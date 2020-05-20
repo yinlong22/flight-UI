@@ -32,6 +32,17 @@
             }
         },
         mounted() {
+            this.$children.forEach((vm) => {
+                if (vm.$options.name === 'fliTabsHead') {
+                    vm.$children.forEach((item) => {
+                        if (item.$options.name === 'fliTabsItem' &&
+                            item.name === this.selected) {
+                            this.eventBus.$emit
+                            ('update:selected', this.selected, item)
+                        }
+                    })
+                }
+            })
             this.eventBus.$emit('update:selected', this.selected)
         },
 
