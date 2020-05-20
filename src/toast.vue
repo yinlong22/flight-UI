@@ -172,6 +172,7 @@
         .close {
             padding-left: 15px;
             flex-shrink: 0;
+            cursor: pointer;
         }
 
         .line {

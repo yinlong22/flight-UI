@@ -44,11 +44,18 @@
     }
 </script>
 <style lang="scss" scoped>
+    $tab-height: 32px;
     .tabs-item {
         padding: 0 1.5em;
         flex-shrink: 0;
-        &.active{
-             background: red;
-         }
+        height: $tab-height;
+        cursor: pointer;
+        align-items: center;
+        display: flex;
+        border: 1px solid darkseagreen;
+
+        &.active {
+            background: red;
+        }
     }
 </style>
