@@ -30,13 +30,13 @@
             } 
 
             &:first-child {
-                border-top-left-radius: 4px;
-                border-bottom-right-radius: 4px;
+                border-top-left-radius: 3px;
+                border-bottom-right-radius: 3px;
             }
 
             &:last-child {
-                border-top-left-radius: 4px;
-                border-bottom-right-radius: 4px;
+                border-top-left-radius: 3px;
+                border-bottom-right-radius: 3px;
             }
 
             &:hover {

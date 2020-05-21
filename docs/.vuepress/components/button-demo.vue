@@ -25,8 +25,8 @@
                 loading1: true,
                 loading2: false,
                 content: `
-                data(){loading1: true,loading2: false}
-                <f-button disabled :loading="loading1" @click="loading1=!loading1">按钮</f-button>
+        data(){loading1: true,loading2: false}
+        <f-button disabled :loading="loading1" @click="loading1=!loading1">按钮</f-button>
         <f-button :loading="loading2" @click="loading2=!loading2" icon="set">按钮</f-button>
         <f-button :loading="loading3" @click="loading3=!loading3" icon="set" icon-position="right">按钮</f-button>
         <f-button-group>

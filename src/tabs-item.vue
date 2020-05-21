@@ -47,7 +47,7 @@
     }
 </script>
 <style lang="scss" scoped>
-    $blue: blue;
+    $color: chocolate;
     $disabled-text-color: grey;
     .tabs-item {
         padding: 0 1.5em;
@@ -58,8 +58,10 @@
         display: flex;
 
         &.active {
-            color: $blue;
+            color: $color;
             font-weight: bold;
+            border-bottom: 2px solid $color;
+            transition: all 360ms;
         }
 
         &.disabled {
