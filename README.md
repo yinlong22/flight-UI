@@ -17,24 +17,48 @@
 
     *,*::before,*::after{box-sizing:border-box;} 
 
-2.模块化引入fliUi
+2.引用
 
-```
-npm i --save fli-ui
-```
+- app.js全局引入fliUi(不推荐)
+
 ```
 import {Button,ButtonGroup,Row,Col,Header,Footer,Content,Sider,Layout,Icon,Input,Toast,plugin,Tabs,TabsHead,TabsBody,TabsItem,Collapse,CollapseItem,Popover} from 'fli-ui'
 import 'flight-ui/dist/index.css'
 
-export default{
-    name:'app',
-    components:{
-        'f-button':Button,
-        'f-tabs-item':TabsItem,
-        'f-组件小写':需要引用的组件,
-    }
-}
+Vue.component('f-button', Button)
+Vue.component('f-icon', Icon)
+Vue.component('f-button-group', ButtonGroup)
+Vue.component('f-input', Input)
+Vue.component('f-row', Row)
+Vue.component('f-col', Col)
+Vue.component('f-layout', Layout)
+Vue.component('f-header', Header)
+Vue.component('f-footer', Footer)
+Vue.component('f-sider', Sider)
+Vue.component('f-content', Content)
+Vue.component('f-toast', Toast)
+Vue.component('f-tabs', Tabs)
+Vue.component('f-tabs-head', TabsHead)
+Vue.component('f-tabs-body', TabsBody)
+Vue.component('f-tabs-item', TabsItem)
+Vue.component('f-tabs-pane', TabsPane)
+Vue.component('f-popover', Popover)
+Vue.component('f-collapse', Collapse)
+Vue.component('f-collapse-item', CollapseItem)
+
 ```
+- 模块化引用
+
+在使用的组件里使用
+
+```
+import Button from 'fli-ui'
+    export default {
+        components: {
+            'f-button': Button,
+        },
+```
+
 组件最外层的元素会自动添加f-*的类名，你也可以在外层添加自己的容器元素包裹组件，并添加自己的类名，覆盖默认样式
 
 3.点击该项目上方链接，获取使用方法

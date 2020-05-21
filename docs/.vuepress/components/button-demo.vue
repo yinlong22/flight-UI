@@ -14,10 +14,11 @@
 </template>
 <script>
     import Button from '../../../src/button'
-
+    import ButtonGroup from '../../../src/button-group'
     export default {
         components: {
-            'f-button': Button
+            'f-button': Button,
+            'f-button-group': ButtonGroup
         },
         data() {
             return {
