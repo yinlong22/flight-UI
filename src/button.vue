@@ -4,7 +4,7 @@
         <f-icon class="icon" v-if="icon && !loading" :name="icon"></f-icon>
         <f-icon class="loading icon" v-if="loading" name="loading"></f-icon>
         <div class="content">
-            <slot/>
+            <slot></slot>
         </div>
     </button>
 </template>
@@ -84,8 +84,8 @@
         }
 
         > .icon {
-            order: 1;
             margin-right: .2em;
+            justify-content: center;
         }
 
 
@@ -105,6 +105,8 @@
             animation: spin 2s infinite linear;
         }
         &[disabled]{
+            border-color: #bbb;
+            color: #bbb;
             cursor: not-allowed;
         }
     }

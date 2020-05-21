@@ -1,8 +1,8 @@
 <template>
     <div>
-        <f-button disabled :loading="loading1" @click="loading1=!loading1">按钮</f-button>
-        <f-button :loading="loading2" @click="loading2=!loading2" icon="set">按钮</f-button>
-        <f-button :loading="loading3" @click="loading3=!loading3" icon="set" icon-position="right">按钮</f-button>
+        <f-button disabled :loading="loading" @click="loading=!loading">按钮</f-button>
+        <f-button :loading="loading" @click="loading=!loading" icon="set">按钮</f-button>
+        <f-button :loading="loading" @click="loading=!loading" icon="set" icon-position="right">按钮</f-button>
         <f-button-group>
             <f-button icon="left">上一页</f-button>
             <f-button>更多</f-button>
@@ -26,6 +26,29 @@
           <f-button :loading="true">默认按钮</f-button>
           <f-button disabled>默认按钮</f-button>
       `.replace(/\t+| +/g, '').trim()
+            }
+        },
+        props: {
+            icon: {},
+            loading: {
+                type: Boolean,
+                default: false
+            },
+            disabled: {
+                type: Boolean,
+                default: false
+            },
+            iconPosition: {
+                type: String,
+                default: 'left',
+                validator(value) {
+                    if (value !== 'left' && value !== 'right') {
+                        window.alert('set左右显示比较好看')
+                        return false
+                    } else {
+                        return true
+                    }
+                }
             }
         }
     }
