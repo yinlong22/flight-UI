@@ -24,20 +24,19 @@
         vertical-align: middle;
 
         > .f-button {
-            border-radius: 0;
 
             &:not(:first-child) {
                 margin-left: -1px;
             } 
 
             &:first-child {
-                border-top-left-radius: var(--border-radius);
-                border-bottom-right-radius: var(--border-radius);
+                border-top-left-radius: 4px;
+                border-bottom-right-radius: 4px;
             }
 
             &:last-child {
-                border-top-left-radius: var(--border-radius);
-                border-bottom-right-radius: var(--border-radius);
+                border-top-left-radius: 4px;
+                border-bottom-right-radius: 4px;
             }
 
             &:hover {

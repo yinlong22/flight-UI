@@ -34,31 +34,8 @@
             <f-button>更多</f-button>
             <f-button icon="right" icon-position="right">下一页</f-button>
         </f-button-group>
-      `.replace(/\t+| +/g, '').trim()
+      `
             }
         },
-        props: {
-            icon: {},
-            loading: {
-                type: Boolean,
-                default: false
-            },
-            disabled: {
-                type: Boolean,
-                default: false
-            },
-            iconPosition: {
-                type: String,
-                default: 'left',
-                validator(value) {
-                    if (value !== 'left' && value !== 'right') {
-                        window.alert('set左右显示比较好看')
-                        return false
-                    } else {
-                        return true
-                    }
-                }
-            }
-        }
     }
 </script>
