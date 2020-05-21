@@ -1,37 +1,268 @@
 <template>
     <div>
-        <f-input value="张三"></f-input>
-        <f-input value="李四" :disabled="true"></f-input>
-        <f-input value="王五" readonly></f-input>
-        <f-input value="王" error="姓名不能少于两个字"></f-input>
-        <p>
-            <f-input value="王" v-model="message"></f-input>{{message}}
-        </p>
+        <h3>24网格</h3>
+        <hr>
+        <f-row align="center">
+            <f-col span="8">
+                <div>8</div>
+            </f-col>
+            <f-col span="8">
+                <div>8</div>
+            </f-col>
+            <f-col span="8">
+                <div>8</div>
+            </f-col>
+        </f-row>
+
+        <f-row align="center">
+            <f-col span="6">
+                <div>6</div>
+            </f-col>
+            <f-col span="6">
+                <div>6</div>
+            </f-col>
+            <f-col span="6">
+                <div>6</div>
+            </f-col>
+            <f-col span="6">
+                <div>6</div>
+            </f-col>
+        </f-row>
+
+        <f-row align="center">
+            <f-col span="4">
+                <div>4</div>
+            </f-col>
+            <f-col span="4">
+                <div>4</div>
+            </f-col>
+            <f-col span="4">
+                <div>4</div>
+            </f-col>
+            <f-col span="4">
+                <div>4</div>
+            </f-col>
+            <f-col span="4">
+                <div>4</div>
+            </f-col>
+            <f-col span="4">
+                <div>4</div>
+            </f-col>
+        </f-row>
+
+        <f-row align="center">
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+        </f-row>
         <h4>代码</h4>
         <pre><code>{{content}}</code></pre>
+        <br>
+        <h3>设置 gutter</h3>
+        <hr>
+        <h4>预览</h4>
+        <f-row gutter="10">
+            <f-col span="8">
+                <div>8</div>
+            </f-col>
+            <f-col span="8">
+                <div>8</div>
+            </f-col>
+            <f-col span="8">
+                <div>8</div>
+            </f-col>
+        </f-row>
+
+        <f-row gutter="10">
+            <f-col span="6">
+                <div>6</div>
+            </f-col>
+            <f-col span="6">
+                <div>6</div>
+            </f-col>
+            <f-col span="6">
+                <div>6</div>
+            </f-col>
+            <f-col span="6">
+                <div>6</div>
+            </f-col>
+        </f-row>
+        <h4>代码</h4>
+        <pre><code>{{content1}}</code></pre>
     </div>
 </template>
 <script>
-    import Input from '../../../src/input'
+    import Row from '../../../src/row'
+    import Col from '../../../src/col'
 
     export default {
         components: {
-            'f-input': Input,
+            'f-row': Row,
+            'f-col': Col,
         },
         data() {
             return {
-                message: 'hello',
                 content: `
-        message: 'hello',
-        <f-input value="张三"></f-input>
-        <f-input value="李四" :disabled="true"></f-input>
-        <f-input value="王五" readonly></f-input>
-        <f-input value="王" error="姓名不能少于两个字"></f-input>
-        <p>
-        <f-input value="王" v-model="message"></f-input>{{message}}
-        </p>
-      `
+        * {
+        box-sizing: border-box;
+         }
+        <f-row align="center">
+            <f-col span="8">
+                <div>8</div>
+            </f-col>
+            <f-col span="8">
+                <div>8</div>
+            </f-col>
+            <f-col span="8">
+                <div>8</div>
+            </f-col>
+        </f-row>
+
+        <f-row align="center">
+            <f-col span="6">
+                <div>6</div>
+            </f-col>
+            <f-col span="6">
+                <div>6</div>
+            </f-col>
+            <f-col span="6">
+                <div>6</div>
+            </f-col>
+            <f-col span="6">
+                <div>6</div>
+            </f-col>
+        </f-row>
+
+        <f-row align="center">
+            <f-col span="4">
+                <div>4</div>
+            </f-col>
+            <f-col span="4">
+                <div>4</div>
+            </f-col>
+            <f-col span="4">
+                <div>4</div>
+            </f-col>
+            <f-col span="4">
+                <div>4</div>
+            </f-col>
+            <f-col span="4">
+                <div>4</div>
+            </f-col>
+            <f-col span="4">
+                <div>4</div>
+            </f-col>
+        </f-row>
+
+        <f-row align="center">
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+            <f-col span="2">
+                <div>2</div>
+            </f-col>
+        </f-row>
+      `,
+                content1: `
+                <f-row gutter="10">
+            <f-col span="8">
+                <div>8</div>
+            </f-col>
+            <f-col span="8">
+                <div>8</div>
+            </f-col>
+            <f-col span="8">
+                <div>8</div>
+            </f-col>
+        </f-row>
+
+        <f-row gutter="10">
+            <f-col span="6">
+                <div>6</div>
+            </f-col>
+            <f-col span="6">
+                <div>6</div>
+            </f-col>
+            <f-col span="6">
+                <div>6</div>
+            </f-col>
+            <f-col span="6">
+                <div>6</div>
+            </f-col>
+        </f-row>`
             }
         },
     }
 </script>
+<style>
+    > .col {
+
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+</style>

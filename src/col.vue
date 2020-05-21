@@ -84,12 +84,10 @@
 </script>
 <style lang="scss" scoped>
     .col {
-        /*height: 100px;*/
-        background: mediumaquamarine;
-        /*width: 50%;*/
+        background: darkseagreen;
         border: 1px solid wheat;
-
         $class-prefix: col-;
+        padding: 12px 0;
         @for $n from 1 through 24 {
             &.#{$class-prefix}#{$n} {
                 width: ($n / 24) * 100%;
