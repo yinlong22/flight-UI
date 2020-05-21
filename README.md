@@ -3,6 +3,9 @@
 ## 介绍
 这是我在学习 Vue 的过程中做的一个 UI 框架，希望对你有用
 
+
+### 目前完成七个组件，正在陆续部署中！！！
+
 ## 开始使用
 1.添加 CSS 样式
 
@@ -38,13 +41,11 @@ import 'flight-ui/dist/index.css'
 export default{
     name:'app',
     components:{
-        'g-button':Button,
-        'g-icon':Icon
+        'f-button':Button,
+        'f-icon':Icon
     }
 }
 ```
-
-## 文档
 
 ## 提问
 
@@ -52,4 +53,5 @@ export default{
 
 ## 联系方式
 
-## 贡献代码
+wx:syl_kong-1g96
+

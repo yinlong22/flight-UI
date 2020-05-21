@@ -1,5 +1,5 @@
 <template>
-    <button class="f-button" :class="{[`icon-${iconPosition}`]:true}"
+    <button class="f-button" :disabled="disabled" :class="{[`icon-${iconPosition}`]:true}"
             @click="$emit('click')">
         <f-icon class="icon" v-if="icon && !loading" :name="icon"></f-icon>
         <f-icon class="loading icon" v-if="loading" name="loading"></f-icon>
@@ -23,6 +23,10 @@
         props: {
             icon: {},
             loading: {
+                type: Boolean,
+                default: false
+            },
+            disabled: {
                 type: Boolean,
                 default: false
             },
@@ -99,6 +103,9 @@
 
         .loading {
             animation: spin 2s infinite linear;
+        }
+        &[disabled]{
+            cursor: not-allowed;
         }
     }
 
