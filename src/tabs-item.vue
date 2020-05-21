@@ -60,8 +60,8 @@
         &.active {
             color: $color;
             font-weight: bold;
-            border-bottom: 2px solid $color;
-            transition: all 360ms;
+            border-bottom: 1.6px solid $color;
+            transition: all 300ms;
         }
 
         &.disabled {

@@ -2,8 +2,9 @@
 title: Button - 按钮
 ---
 # 按钮
-
-使用方法
+### 简单用法
+#### 预览
+<hr><br>
 <ClientOnly>
   <button-demo></button-demo>
 </ClientOnly>

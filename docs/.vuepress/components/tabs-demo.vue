@@ -27,7 +27,7 @@
             </f-tabs-pane>
         </f-tabs-body>
     </f-tabs>
-
+        <h4>代码</h4>
     <pre><code>{{content}}</code></pre>
     </div>
 </template>
@@ -51,6 +51,7 @@
             return {
                 selectedTabs: 'sport',
                 content: `
+data(){selectedTabs: 'sport'}
 <f-tabs :selected.sync="selectedTabs">
         <f-tabs-head>
             <template slot="actions">

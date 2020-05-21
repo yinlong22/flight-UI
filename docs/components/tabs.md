@@ -2,8 +2,9 @@
 title: Tabs - 标签
 ---
 # 标签
-
-使用方法
+### 简单用法
+#### 预览
+<hr><br>
 <ClientOnly>
   <tabs-demo></tabs-demo>
 </ClientOnly>

@@ -2,8 +2,9 @@
 title: Input - 输入框
 ---
 # 输入框
-
-使用方法
+### 简单用法
+#### 预览
+<hr><br>
 <ClientOnly>
   <input-demo></input-demo>
 </ClientOnly>
