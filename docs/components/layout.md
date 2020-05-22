@@ -1,7 +1,9 @@
 ---
 title: Layout - 布局
 ---
-# 布局
-### 简单用法
+# 默认    布局
 #### 预览
 <hr><br>
+<ClientOnly>
+  <layout-demo></layout-demo>
+</ClientOnly>

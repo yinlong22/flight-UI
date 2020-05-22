@@ -9,6 +9,7 @@
         <br>
         <h3>双向绑定</h3>
         <hr>
+        <h4>预览</h4>
             <f-input value="王" v-model="message"></f-input>
             <p>message: {{message}}</p>
         <h4>代码</h4>
