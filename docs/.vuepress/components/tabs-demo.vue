@@ -3,7 +3,7 @@
     <f-tabs :selected.sync="selectedTabs">
         <f-tabs-head>
             <template slot="actions">
-                <button>设置</button>
+                <f-button>设置</f-button>
             </template>
             <f-tabs-item name="woman" disabled>
                 woman
@@ -38,6 +38,7 @@
     import TabsBody from "../../../src/tabs-body";
     import TabsItem from "../../../src/tabs-item";
     import TabsPane from "../../../src/tabs-pane";
+    import Button from "../../../src/button";
 
     export default {
         components: {
@@ -46,6 +47,7 @@
             'f-tabs-body': TabsBody,
             'f-tabs-item': TabsItem,
             'f-tabs-pane': TabsPane,
+            'f-button':Button
         },
         data() {
             return {
