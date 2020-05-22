@@ -162,7 +162,7 @@
         min-height: $toast-min-height;
         line-height: $line-height;
         display: flex;
-        color: honeydew;
+        color: snow;
         align-items: center;
         border-radius: 5px;
         padding: 0 16px;

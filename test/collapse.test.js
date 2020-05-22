@@ -41,16 +41,16 @@ describe('Collapse', () => {
 
     it('接受 single 属性', (done) => {
 
-        Vue.component('g-collapse', Collapse)
-        Vue.component('g-collapse-item', CollapseItem)
+        Vue.component('f-collapse', Collapse)
+        Vue.component('f-collapse-item', CollapseItem)
         const div = document.createElement('div')
         document.body.appendChild(div)
         div.innerHTML = `
-        <g-collapse :selected.sync="xxx" single>
-          <g-collapse-item title="标题1" name="1"><span id="content-1">1</span></g-collapse-item>
-          <g-collapse-item title="标题2" name="2"><span id="content-2">2</span></g-collapse-item>
-          <g-collapse-item title="标题3" name="3"><span id="content-3">3</span></g-collapse-item>
-        </g-collapse>
+        <f-collapse :selected.sync="xxx" single>
+          <f-collapse-item title="标题1" name="1"><span id="content-1">1</span></f-collapse-item>
+          <f-collapse-item title="标题2" name="2"><span id="content-2">2</span></f-collapse-item>
+          <f-collapse-item title="标题3" name="3"><span id="content-3">3</span></f-collapse-item>
+        </f-collapse>
     `
         const vm = new Vue({
             el: div,
