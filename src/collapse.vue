@@ -51,10 +51,10 @@
 </script>
 
 <style scoped lang="scss">
-    $grey: #ddd;
     $border-radius: 4px;
     .collapse {
-        border: 1px solid $grey;
+        border: 1px solid honeydew;
+        background: ghostwhite;
         border-radius: $border-radius;
     }
 </style>
