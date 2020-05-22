@@ -5,8 +5,8 @@ module.exports = {
     themeConfig: {
         nav: [
             {text: '主页', link: '/'},
-            {text: '文档', link: '/guide/'},
-            {text: '交流', link: 'https://google.com'},
+            {text: '文档', link: 'https://github.com/yinlong22/flight-UI'},
+            {text: '交流', link: 'https://juejin.im/post/5ec7888c6fb9a04797066f01'},
         ],
         sidebar: [
             {
