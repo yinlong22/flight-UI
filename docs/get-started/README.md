@@ -14,7 +14,7 @@ title: 快速上手
 
 2.引用
 
-- app.js全局引入fliUi(不推荐)
+- app.js全局引入fliUi(推荐)
 ```
 import {Button,ButtonGroup,Row,Col,Header,Footer,Content,Sider,Layout,Icon,Input,Toast,plugin,Tabs,TabsHead,TabsBody,TabsItem,Collapse,CollapseItem,Popover} from 'fli-ui'
 import 'flight-ui/dist/index.css'
@@ -43,9 +43,9 @@ Vue.component('f-collapse-item', CollapseItem)
 ```
 - 模块化引用
 
-在使用的组件里使用
+在使用的组件里引用,下面以 Button 为例
 ```
-import Button from 'fli-ui'
+import {Button} from 'fli-ui'
     export default {
         components: {
             'f-button': Button,

@@ -10,7 +10,6 @@ import Sider from './sider'
 import Content from './content'
 import Footer from './footer'
 import Header from './header'
-import Toast from './toast'
 import plugin from './plugin'
 import Tabs from './tabs'
 import TabsHead from './tabs-head'
@@ -33,7 +32,6 @@ Vue.component('f-header', Header)
 Vue.component('f-footer', Footer)
 Vue.component('f-sider', Sider)
 Vue.component('f-content', Content)
-Vue.component('f-toast', Toast)
 Vue.component('f-tabs', Tabs)
 Vue.component('f-tabs-head', TabsHead)
 Vue.component('f-tabs-body', TabsBody)

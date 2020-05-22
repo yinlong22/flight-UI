@@ -90,7 +90,7 @@
     $line-height: 1.8;
     $toast-min-height: 40px;
     $toast-bg: rgba(0, 0, 0, 0.75);
-    $animation-duration: 1s;
+    $animation-duration: .5s;
     @keyframes slideUp {
         0% {
             opacity: 0;
@@ -129,7 +129,7 @@
 
         &.position-top {
             top: 0;
-
+            z-index: 30;
             .toast {
                 border-top-left-radius: 0;
                 border-top-right-radius: 0;
@@ -168,7 +168,6 @@
         padding: 0 16px;
         background: $toast-bg;
         box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.50);
-
         .close {
             padding-left: 15px;
             flex-shrink: 0;
