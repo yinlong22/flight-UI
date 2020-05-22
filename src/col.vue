@@ -1,6 +1,6 @@
 <template>
     <div class="col" :class="colClass" :style="colStyle">
-        <slot></slot>
+        <div><slot></slot></div>
     </div>
 </template>
 <script>
@@ -84,10 +84,12 @@
 </script>
 <style lang="scss" scoped>
     .col {
-        background: darkseagreen;
-        border: 1px solid wheat;
         $class-prefix: col-;
-        padding: 12px 0;
+        > div{
+            background: darkseagreen;
+            border: 1px solid wheat;
+            padding: 18px 0;
+        }
         @for $n from 1 through 24 {
             &.#{$class-prefix}#{$n} {
                 width: ($n / 24) * 100%;
