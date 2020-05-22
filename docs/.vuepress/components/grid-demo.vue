@@ -209,7 +209,6 @@
                 <div>8</div>
             </f-col>
         </f-row>
-
         <f-row align="center">
             <f-col span="6">
                 <div>6</div>
@@ -224,7 +223,6 @@
                 <div>6</div>
             </f-col>
         </f-row>
-
         <f-row align="center">
             <f-col span="4">
                 <div>4</div>
@@ -245,7 +243,6 @@
                 <div>4</div>
             </f-col>
         </f-row>
-
         <f-row align="center">
             <f-col span="2">
                 <div>2</div>
@@ -284,7 +281,7 @@
                 <div>2</div>
             </f-col>
         </f-row>
-      `,
+      `.replace(/\s{2,}/, '').trim(),
                 content1: `
          <f-row align="center" gutter="10">
             <f-col span="8">
@@ -297,7 +294,6 @@
                 <div>8</div>
             </f-col>
         </f-row>
-
         <f-row align="center" gutter="10">
             <f-col span="6">
                 <div>6</div>
@@ -311,7 +307,7 @@
             <f-col span="6">
                 <div>6</div>
             </f-col>
-        </f-row>`,
+        </f-row>`.replace(/\s{2,}/, '').trim(),
                 content2:`
                 <f-row gutter="10" align="center">
             <f-col span="8">
@@ -366,7 +362,7 @@
                 <div>2</div>
             </f-col>
         </f-row>
-                `
+                `.replace(/\s{2,}/, '').trim()
             }
         },
     }

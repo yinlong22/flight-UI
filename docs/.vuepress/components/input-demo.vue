@@ -31,13 +31,13 @@
         <f-input value="王五" readonly></f-input>
         <f-input value="王" error="姓名不能少于两个字"></f-input>
 
-      `,
+      `.replace(/\t+| +/g, '').trim(),
                 content1:`
         data(){message: 'hello'}
         <p>
             <f-input value="王" v-model="message"></f-input>{{message}}
         </p>
-                `
+                `.replace(/\s{2,}/, '').trim()
             }
         },
     }

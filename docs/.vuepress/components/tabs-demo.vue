@@ -79,7 +79,7 @@ data(){selectedTabs: 'sport'}
             </f-tabs-pane>
         </f-tabs-body>
     </f-tabs>
-      `
+      `.replace(/\s{2,}/, '').trim()
             }
         },
     }

@@ -35,7 +35,7 @@
             <f-button>更多</f-button>
             <f-button icon="right" icon-position="right">下一页</f-button>
         </f-button-group>
-      `
+      `.replace(/\s{2,}/, '').trim()
             }
         },
     }
