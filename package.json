@@ -20,6 +20,7 @@
   "author": "yinlong22",
   "license": "MIT",
   "dependencies": {
+    "sass-loader": "^8.0.2",
     "vue": "^2.6.11",
     "vue-hot-reload-api": "^2.3.4"
   },

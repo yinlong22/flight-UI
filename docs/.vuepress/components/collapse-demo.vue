@@ -2,15 +2,15 @@
     <div>
         <f-collapse :selected.sync="selectedTab">
             <f-collapse-item title="水果" name="1">
-                <img height="300"
+                <img height="200"
                      src="./1.png">
             </f-collapse-item>
             <f-collapse-item title="蛋糕" name="2">
-                <img height="300px"
+                <img height="200px"
                      src="./2.png">
             </f-collapse-item>
             <f-collapse-item title="哈士奇" name="3">
-                <img height="300px"
+                <img height="200px"
                      src="./3.png">
             </f-collapse-item>
         </f-collapse>
